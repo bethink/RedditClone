@@ -1,9 +1,8 @@
 class RedditController < ApplicationController
 
-  # before_filter :authenticate 
-  
+  # before_filter :authenticate
   def top
-    @post = Reddit.top
+    @posts = Reddit.top(:page => params[:page], :after => params[:after])
   end
-  
+
 end
