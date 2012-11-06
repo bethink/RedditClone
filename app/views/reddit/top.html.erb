@@ -1,20 +1,9 @@
 <div style="padding: 5px 240px 0px 240px;">
 	<h3> Reddit Top </h3>
 
+	<%= render :partial => 'pagination' %>
 	<table class="table table-striped">
 		<%= render :partial => 'post', :collection => @posts %>
 	</table>
-	<div class="pagination pagination-centered">
-		<ul>
-			<li>
-			<%= link_to '1', top_reddit_index_path(:page => 1) %>
-			</li>
-			<li>
-				<%= link_to '2', top_reddit_index_path(:page => 2, :after => @posts.last.name) %>
-			</li>
-			<li>
-				<%= link_to '3', top_reddit_index_path(:page => 3) %>
-			</li>
-		</ul>
-	</div>
+	<%= render :partial => 'pagination' %>
 </div>

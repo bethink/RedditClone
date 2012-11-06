@@ -1,0 +1,16 @@
+<div class="pagination pagination-centered pagination-small">
+	<ul>
+		<% page = (params[:page] || 1).to_i %>
+		<%= content_tag :li, :class => (page == 1) ? 'disabled' : nil do %>
+		<%= link_to '1', top_reddit_index_path(:page => 1) %>
+		<% end %>
+
+		<%= content_tag :li, :class => (page == 2) ? 'disabled' : nil do %>
+		<%= link_to '2', top_reddit_index_path(:page => 2, :after => @posts.last.name) %>
+		<% end %>
+
+		<%= content_tag :li, :class => (page == 3) ? 'disabled' : nil do %>
+		<%= link_to '3', top_reddit_index_path(:page => 3) %>
+		<% end %>
+	</ul>
+</div>
