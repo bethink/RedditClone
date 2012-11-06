@@ -6,9 +6,15 @@
 			<%= link_to post.url do %>
 			<% image_tag post.thumbnail, :size => "90x90" %>
 			<% end %>
+			<% width = "670px;" %>
+			<% else %>
+			<% width = "781px;" %>
 			<% end %>
 		</div>
-		<div style="float: left;margin-left:12px;">
+		
+		
+		
+		<div style="float: left;margin-left:12px;width: <%= width %>">
 			<%= link_to post.title, post.url %>
 		</div>
 		
