@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     unless session[:username].blank?
       redirect_to top_reddit_index_path
