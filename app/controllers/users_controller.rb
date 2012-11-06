@@ -12,7 +12,8 @@ class UsersController < ApplicationController
       session[:username] = params[:username]
       redirect_to top_reddit_index_path
     else
-      redirect_to root_url, :error => "Invalid usename / password."
+      flash[:errors] = "Invalid usename / password."
+      redirect_to root_url
     end
   end
 

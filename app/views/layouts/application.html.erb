@@ -10,7 +10,7 @@
 
 		<div style='text-align: center;'>
 			<%= content_tag :p, flash[:notice], :class => 'text-success' %>
-			<%= content_tag :p, flash[:error], :class => 'text-error' %>
+			<%= content_tag :p, flash[:errors], :class => 'text-error' %>
 		</div>
 
 		<%= yield %>
