@@ -1,0 +1,22 @@
+<tr>
+	<td>
+	<div>
+		<div style="float: left;">
+			<% if post.thumbnail[/(.png|.jpg|.jpeg)$/i] %>
+			<%= link_to post.url do %>
+			<% image_tag post.thumbnail, :size => "90x90" %>
+			<% end %>
+			<% end %>
+		</div>
+		<div style="float: left;margin-left:12px;">
+			<%= link_to post.title, post.url %>
+		</div>
+		
+		<div style="clear:both;margin-top: 10px;margin-left:450px;">
+			by
+			<%= link_to post.author, "http://www.reddit.com/user/#{post.author}" %>
+			at
+			<%= Time.at(post.created_at.to_i).strftime('%e %b %Y,%l:%M %p') %>
+		</div>
+	</div><td>
+</tr>
