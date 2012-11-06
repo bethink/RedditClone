@@ -1,4 +1,11 @@
 <div style="padding: 5px 240px 0px 240px;">
+	<div class="row">
+		<div class="span3 offset11">
+			Hi <%= session[:username]%>,
+			<%= link_to 'Logout', logout_users_path %>
+		</div>
+	</div>
+	
 	<h3> Reddit Top </h3>
 
 	<%= render :partial => 'pagination' %>

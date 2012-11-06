@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
-  # before_filter :authenticate, :only => [:index]
-
   def index
+    unless session[:username].blank?
+      redirect_to top_reddit_index_path
+    end
   end
 
   def login
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
 
     if auth_status
       session[:username] = params[:username]
-      redirect_to top_reddit_index_path, :notice => "Logged in successfully."
+      redirect_to top_reddit_index_path
     else
       redirect_to root_url, :error => "Invalid usename / password."
     end

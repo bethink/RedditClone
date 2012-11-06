@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RedditClone</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>RedditClone</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+		<div style='text-align: center;'>
+			<%= content_tag :p, flash[:notice], :class => 'text-success' %>
+			<%= content_tag :p, flash[:error], :class => 'text-error' %>
+		</div>
 
-</body>
+		<%= yield %>
+
+	</body>
 </html>
