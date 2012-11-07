@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'httparty'
 gem 'therubyracer'
 
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -19,6 +20,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+  gem 'webmock'
 end
 
 gem 'jquery-rails'
