@@ -15,4 +15,6 @@ RedditClone
 Hit localhost:3000 in your browser
 
 	========== IMPORTANT ==========
-	Use your reddit username and password for login 
+	Use your reddit username and password for login
+	Unit test not done.
+ 
